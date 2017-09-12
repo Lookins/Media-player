@@ -1,0 +1,145 @@
+{$reference 'PresentationCore.dll'} 
+{$reference 'System.Windows.Forms.dll'} 
+uses crt;
+var
+ Player1 := new System.Windows.Media.MediaPlayer; 
+ l:byte;
+ x:integer;
+ Begin
+ repeat
+ Player1.Stop(); 
+  textcolor(green);
+ Writeln('Список песе:');
+ Writeln('1. OGMF - Hellow');
+ Writeln('2. Alan Walker - Faded' );
+ Writeln('3. Melanie Martinez - Pitty Party');
+ Writeln('4. Joel Adams - Pleas dont"t go');
+ Writeln('5. Elvis Presley - Hound Dog');
+ Writeln('6. Buddy Holly And The Crickets - Not Fade Away');
+ Writeln('7. Chuck Berry - Go, Johnny, Go');
+ Writeln('8. Nbsplv - Трава у Дома');
+ Writeln('10. The Pierces - Secret');
+ Writeln('11. Melanie Martinez - Cry Baby');
+ Writeln('12. Melanie Martinez - Dollhouse');
+ Writeln('13. Информация о программе');
+  Writeln('');
+ Write('Введите номер песни: ');
+ Read(l);
+  textcolor(Red); 
+case l of;
+0:Writeln('Ошибка! Введите число от 1 до 14');
+15..255:Writeln('Ошибка! Введите число от 1 до 14');
+End;
+if l=1 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('1.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('Сейчас играет OGMF-Hellow');
+End;
+if l=2 then
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('2.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+textcolor(green); Writeln('Сейчас играет Alan Walker-Faded');
+End;
+if l=3 then 
+Begin 
+ClrScr;
+Write('Выбрана песня "Monster"');
+ClrScr;
+Player1.Open(new System.Uri('13.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+textcolor(green); Writeln('Сейчас играет Monster');
+End;
+if l=4 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('4.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('Сейчас играет Joel Adams-Pleas dont"t go');
+end;
+if l=5 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('5.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('Сейчас играет Hound Dog')
+End;
+if l=6 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('6.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('Сейчас играет Not Fade Away');
+End;
+if l=7 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('7.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('Сейчас играет Go, Johnny, Go');
+End;
+
+if l=8 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('9.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('Сейчас играет Шаман');
+End;
+if l=9 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('10.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('The Pierces - Secret');
+End;
+if l=10 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('11.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('Melanie Martinez - Cry Baby');
+End;
+if l=11 then 
+Begin 
+ClrScr;
+Player1.Open(new System.Uri('12.mp3', System.UriKind.Relative)); 
+Player1.Play(); 
+ textcolor(green); 
+ Writeln('Melanie Martinez - Dollhouse');
+End;
+if l=12 then
+Begin
+ClrScr;
+ textcolor(green);
+Writeln('Информация:');
+Write('Название:'); textcolor(red); Write(' Медио проигрыватель.'); Writeln('');
+textcolor(green); Write('Версия:'); textcolor(red); Write(' 1.0.2.'); Writeln('');
+textcolor(green); Write('Автор программы:'); textcolor(red); Write(' Lookins.');
+Writeln('');
+end;
+ textcolor(green);
+Writeln('');
+Writeln('');
+Writeln('');
+Writeln('-----------------------------');
+Writeln('Ввести список песен ещё раз?');
+Writeln('1. Да');
+Writeln('0. Нет');
+Write('Ваш выбор: ');
+Read(x);
+ClrScr;
+until x<> 1;
+end.
+
